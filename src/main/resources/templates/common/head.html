@@ -1,0 +1,25 @@
+<div class='top_top'>
+    <div class='logbox' style="background: #f9f9f9;height: 30px;width: 100%;border-bottom: 1px solid #ededed;font-size: 14px;line-height: 20px;color: #333;">
+        <div class="top container" style="margin-right:auto;margin-left:auto;width: 940px;position:initial;">
+            <div class="fd-left" style="margin-right: 100px;width: 200px;height: 20px;float: none;position: absolute">
+                <a href="../manager/index" title="首页"><img style="height:20px" src='../img/logo2.png' /></a>
+                <%
+                var userInfoTop = session.uupUserSummary;
+                if(userInfoTop != null){ %>
+                <td >${userInfoTop.loginName}</td>
+                <a href="${ctxPath}/manager/outLogin" style="color: blue">【安全退出】</a>
+                <%}else{ %>
+                <a href="../manager/login">请登录</a>  |
+                <a href="../manager/register" target="_blank">免费注册</a>
+                <% } %>
+            </div>
+            <div class="topbar-mid" style=" width: 400px;float: none;margin-left: 360px;">
+                <a href="../manager/index" >首页</a>  |
+                <a href="../v1/spareNames/queryHtml"  target="_blank">预备姓名</a>  |
+                <a>家庭成员</a>  |
+                <a>婴儿知识</a>  |
+                <a>母婴商城</a>
+            </div>
+        </div>
+    </div>
+</div>

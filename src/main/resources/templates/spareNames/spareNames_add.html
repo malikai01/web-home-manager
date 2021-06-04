@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>新增预备姓名</title>
+    <% include("/templates/common/top.html"){} %>
+    <script type="text/javascript" src="${ctxPath}/takeNames/takeNamesList.js"></script>
+</head>
+<body>
+<style>
+    *{
+        font-family: 微软雅黑;
+        outline: none;
+        margin: 0;
+        padding: 0;
+    }
+</style>
+<% include("/templates/common/head.html"){} %>
+<div class="m_r">
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="icon icon-home"></i> 预备姓名</a></li>
+        <li class="active">预备姓名新增</li>
+    </ol>
+    <div class="m_r_t">新增预备姓名</div>
+    <form id="saveNames" enctype="multipart/form-data"  method="post" >
+        <div id="float02"></div>
+        <div class="col-xs-6 ">
+            <div class="input-group">
+                <span class="input-group-addon">预备姓名</span>
+                <input type="text" class="form-control lxr" id="name" name="name" placeholder="预备姓名" />
+            </div>
+        </div>
+        <div class="col-xs-6 ">
+            <div class="input-group">
+                <span class="input-group-addon">类　　型</span>
+                <select  id="type"  name="type" class="form-control">
+                    <option value="">请选择类型</option>
+                    <option  value="00">中文</option>
+                    <option  value="01">英文</option>
+                    <option  value="02">其他</option>
+                </select>
+            </div>
+        </div>
+        <div class="blank20"></div>
+        <div class="col-xs-6 ">
+            <div class="input-group">
+                <span class="input-group-addon">备　　注</span>
+                <textarea class="form-control" id="memo" name="memo" placeholder="备    注"></textarea>
+            </div>
+        </div>
+        <div class="blank20"></div>
+    </form>
+    <div class="clearfix"></div>
+    <div class="sup_btn01" style="text-align:center">
+        <button class="btn btn-success" type="button" data-loading-text="正在提交..." onclick="saveNames($(this))">保存信息</button>
+        <button type="button" class="btn m_l10" onclick="emptyName()">取消</button>
+        <button type="button" class="btn m_110" onclick="backList()">返回列表</button>
+    </div>
+    <div class="blank40"></div>
+</div>
+</body>
+</html>

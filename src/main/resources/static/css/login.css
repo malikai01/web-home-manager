@@ -1,0 +1,94 @@
+
+.logo_img img{
+    margin-left: 20px;
+    float: left;
+}
+.login_content{
+    width: 100%;
+    height: 1000px;
+    clear: both;
+    background-image:url(../img/login.jpg);
+    -moz-background-size:100% 100%; background-size:100% 100%;
+    background-position:center;
+
+    background-repeat:repeat-y;
+}
+.login_box{
+    width: 358px;
+    height: 304px;
+    float: right;
+    margin: 250px 250px 0 0;
+    padding:30px;
+}
+.login_box .login_field .int{
+    font-size: 14px;
+    color: #B7B7B7;
+    width: 315px;
+    height: 44px;
+    line-height:44px;
+    padding-left:40px;
+    border: none;
+    box-shadow: 0px 1px 3px #DFDEDE inset;
+    background-color: white;
+}
+.login_box .login_field .int1{
+    font-size: 14px;
+    color: #B7B7B7;
+    width: 315px;
+    height: 44px;
+    line-height:44px;
+    padding-left:40px;
+    border: none;
+    box-shadow: 0px 1px 3px #DFDEDE inset;
+    background-color: white;
+    margin-top: 25px;
+}
+.login_box .login_field .int2{
+    font-size: 14px;
+    color: #B7B7B7;
+    width: 145px;
+    height: 44px;
+    line-height:44px;
+    border: none;
+    box-shadow: 0px 1px 3px #DFDEDE inset;
+    background-color: white;
+    margin: 15px 0 0 0;
+    float: left;
+    text-indent: 5px;
+}
+.yzm_kbq{
+    color: #7F7D7D;
+    float: left;
+    margin: 25px 0 0 10px;
+}
+.loginbtn{
+    margin: 27px auto 15px;
+}
+.loginbtn a{
+    display: block;
+    width: 295px;
+    height:45px !important;
+    line-height:45px;
+}
+.login_box .bottom{
+    width: 315px;
+    margin: 0 auto;
+}
+.login_box .bottom a:hover{ color:#36F; text-decoration:underline;}
+.login_box .bottom .rem{
+    float: left;
+    margin-left: 5px;
+    font-size: 14px;
+}
+.login_box .bottom .res{
+    color: #E23939 !important;
+    float: right;
+    font-size: 14px;
+}
+.login-tips{color:#999; margin:15px 6px 0;}
+
+.btn-ljxq {
+    left: 44%;
+    position: absolute;
+    top: 180px;
+}

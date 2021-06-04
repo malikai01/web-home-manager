@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>配置中心</title>
+    <% include("/templates/common/top.html"){} %>
+    <script type="text/javascript" src="${ctxPath}/config/configList.js"></script>
+</head>
+<body>
+<style>
+    *{
+        font-family: 微软雅黑;
+        outline: none;
+        margin: 0;
+        padding: 0;
+    }
+
+</style>
+<div class='top_top'>
+    <div class='logbox'
+         style="background: #f9f9f9;height: 30px;width: 100%;border-bottom: 1px solid #ededed;font-size: 14px;line-height: 20px;color: #333;">
+        <div class="top container" style="margin-right:auto;margin-left:auto;width: 940px;position:initial;">
+            <div class="fd-left" style="margin-right: 100px;width: 200px;height: 20px;float: none;position: absolute">
+                <a href="../manager/index" title="首页"><img style="height:20px"
+                                                                  src='../img/logo2.png'/></a>
+                <%
+                var userInfoTop = session.uupUserSummary;
+                if(userInfoTop != null){ %>
+                <td>${userInfoTop.loginName}</td>
+                <a href="${ctxPath}/manager/outLogin" style="color: blue">【安全退出】</a>
+                <%}else{ %>
+                <a href="../manager/login">请登录</a> |
+                <a href="../manager/register" target="_blank">免费注册</a>
+                <% } %>
+            </div>
+            <div class="topbar-mid" style=" width: 400px;float: none;margin-left: 360px;">
+                <a href="../manager/index">首页</a> |
+                <a href="../v1/spareNames/html" target="_blank">预备姓名</a> |
+                <a>家庭成员</a> |
+                <a>婴儿知识</a> |
+                <a>母婴商城</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="m_r">
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="icon icon-home"></i> 配置中心列表</a></li>
+        <li class="active">配置中心列表</li>
+    </ol>
+    <table class="table table-borderless table_v_m table-fixed">
+        <tbody>
+        <tr>
+            <td width="5%">key：</td>
+            <td width="20%"><input type="text" class="form-control" id="configKey"></td>
+        </tr>
+        <tr>
+            <td colspan="6" align="center">
+                <button class="btn btn-success" onclick="queryAll()">查询</button>
+                <!--<button class="btn btn-success" onclick="addName()">新增</button>-->
+                <button class="btn btn-success" onclick="reset()">重置</button>
+            </td>
+        </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-bordered table_v_m table_a_c">
+        <thead>
+        <tr>
+            <th width="15%" style="text-align:center;">key</th>
+            <th width="20%" style="text-align:center;">value</th>
+            <th width="15%" style="text-align:center;">备注</th>
+            <th width="15%" style="text-align:center;">创建人</th>
+            <th width="20%" style="text-align:center;">创建时间</th>
+            <th style="text-align:center;">操作</th>
+        </tr>
+        </thead>
+        <tbody id="configListTable">
+
+        </tbody>
+    </table>
+    <!--page-->
+    <div id="pagination"></div>
+    <!--page end-->
+    <div class="clearfix"></div>
+</div>
+</body>
+</html>

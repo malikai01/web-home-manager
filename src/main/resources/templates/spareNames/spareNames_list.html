@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>预备姓名</title>
+    <% include("/templates/common/top.html"){} %>
+    <script type="text/javascript" src="${ctxPath}/takeNames/takeNamesList.js"></script>
+</head>
+<body>
+<style>
+    *{
+        font-family: 微软雅黑;
+        outline: none;
+        margin: 0;
+        padding: 0;
+    }
+</style>
+<% include("/templates/common/head.html"){} %>
+<div class="m_r">
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="icon icon-home"></i> 预备姓名列表</a></li>
+            <li class="active">预备姓名列表</li>
+        </ol>
+        <table class="table table-borderless table_v_m table-fixed">
+            <tbody>
+            <tr>
+                <td width="5%" style="display:table-cell; vertical-align:middle">姓名：</td>
+                <td width="20%" ><input type="text" class="form-control" id="name"></td>
+                <td width="5%" style="display:table-cell; vertical-align:middle">备注：</td>
+                <td width="20%" >
+                    <input type="text" class="form-control" id="memo">
+                </td>
+                <td width="5%"style="display:table-cell; vertical-align:middle">类型：</td>
+                <td width="20%">
+                    <select class="form-control" id="type"  name="type" >
+                        <option  value="">请选择</option>
+                        <option  value="00">中文</option>
+                        <option  value="01">英文</option>
+                        <option  value="02">其他</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6" align="center">
+                    <button class="btn btn-success" id="chaxun" onclick="queryAll()">查询</button>
+                    <button class="btn btn-success" onclick="addName()">新增</button>
+                    <button class="btn btn-success" onclick="reset()">重置</button>
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-bordered table_v_m table_a_c" >
+            <thead>
+            <tr>
+                <th width="8%" style="text-align:center;">序号</th>
+                <th width="10%" style="text-align:center;">姓名</th>
+                <th width="10%" style="text-align:center;">类型</th>
+                <th width="30%" style="text-align:center;">备注</th>
+                <th width="10%" style="text-align:center;">是否展示</th>
+                <th width="20%" style="text-align:center;">更新时间</th>
+                <th style="text-align:center;">操作</th>
+            </tr>
+            </thead>
+            <tbody id="takeNamesListTable">
+
+            </tbody>
+        </table>
+        <!--page-->
+        <div id="pagination"></div>
+        <!--page end-->
+        <div class="clearfix"></div>
+    </div>
+</body>
+</html>

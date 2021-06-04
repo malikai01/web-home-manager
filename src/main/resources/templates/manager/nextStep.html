@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>绑定家庭成员</title>
+    <% include("/templates/common/top.html"){} %>
+    <script type="text/javascript" src="${ctxPath}/manager/registerxx.js"></script>
+</head>
+<body>
+<div class="m_r">
+    <div class="m_r_t"><span>绑定家庭成员</span></div>
+    <table class="table datatable" style="margin:20px auto; width:98%;" id="bindingTable">
+        <thead>
+        <tr>
+            <th width="20%">成员名称</th>
+            <th width="15%">年    龄</th>
+            <th width="15%">关    系</th>
+            <th width="15%">性    别</th>
+            <th>备    注</th>
+            <th width="10%">操    作</th>
+        </tr>
+        </thead>
+        <tbody>
+            <%for(binding in listBinding) {%>
+            <tr>
+                <td style="word-wrap:break-word;word-break:break-all;">${binding.name!}</td>
+                <td>${binding.age!}</td>
+                <td style="word-wrap:break-word;word-break:break-all;">${binding.relation!}</td>
+                <td>${binding.gender!""=='00'?"男":"女"}</td>
+                <td style="word-wrap:break-word;word-break:break-all;">${binding.memo! == null || binding.memo! == "null" ? "" : binding.memo}</td>
+                <td><a href="javascript:;" class="blue" onclick="editBinding('${binding.id!}','${binding.name!}','${binding.age!}','${binding.relation!}','${binding.gender!}','${binding.memo!}')">编辑</a>
+                    <a href="javascript:;" class="blue" onclick="delBinding('${binding.id!}')">删除</a>
+                </td>
+            </tr>
+            <%}%>
+        </tbody>
+    </table>
+    <form id="saveBinding" enctype="multipart/form-data"  method="post" >
+        <input id="loginId"  name="loginId"   type="hidden" value="${loginId}"/>
+        <input id="id"  name="id"   type="hidden" />
+        <div id="float02"></div>
+        <div class="col-xs-6 ">
+            <div class="input-group">
+                <span class="input-group-addon">成员名称</span>
+                <input type="text" class="form-control lxr" id="name" name="name" placeholder="成员名称" />
+            </div>
+        </div>
+        <div class="col-xs-6 ">
+            <div class="input-group">
+                <span class="input-group-addon">年　　龄</span>
+                <input type="text" class="form-control lxr" id="age" name="age" placeholder="年    龄" />
+            </div>
+        </div>
+        <div class="blank20"></div>
+        <div class="col-xs-6 ">
+            <div class="input-group">
+                <span class="input-group-addon">关　　系</span>
+                <input type="text" class="form-control" id="relation" name="relation" placeholder="关    系">
+
+            </div>
+        </div>
+        <div class="col-xs-6 ">
+            <div class="input-group">
+                <span class="input-group-addon">性　　别</span>
+                <select  id="gender"  name="gender" class="form-control">
+                    <option value="">请选择性别</option>
+                    <option value="00">男</option>
+                    <option value="01">女</option>
+                </select>
+            </div>
+        </div>
+        <div class="blank20"></div>
+        <div class="col-xs-6 ">
+            <div class="input-group">
+                <span class="input-group-addon">备　　注</span>
+                <textarea class="form-control" id="memo" name="memo" placeholder="备    注"></textarea>
+            </div>
+        </div>
+        <div class="blank20"></div>
+    </form>
+    <div class="clearfix"></div>
+    <div class="sup_btn01" style="text-align:center">
+        <button class="btn btn-success" type="button" data-loading-text="正在提交..." onclick="saveBinding($(this))">保存信息</button>
+        <button type="button" class="btn m_l10" onclick="emptyBinding()">取消</button>
+        <button type="button" class="btn m_l10 btn-warning" onclick="toLogin()">返回登录</button>
+    </div>
+    <div class="blank40"></div>
+</div>
+</body>
+</html>

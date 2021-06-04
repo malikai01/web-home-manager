@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<title>李凯家庭管理登录</title>-->
+    <% include("/templates/common/top.html"){} %>
+    <script type="text/javascript" src="${ctxPath}/manager/login.js"></script>
+    <link rel="stylesheet" href="${ctxPath}/css/login.css" />
+    <link rel="stylesheet" href="${ctxPath}/css/loginStyle.css" />
+</head>
+<body>
+<div class="login_content">
+    <div class="login_box">
+        <div class="login_field">
+            <input id="loginName" name="loginName" type="text" tabindex="1" class="int" placeholder="请输入用户名">
+        </div>
+        <div class="login_field">
+            <input class="int1" tabindex="2" type="password" id="password" placeholder="请输入密码">
+        </div>
+        <div class="clear"></div>
+        <div class="loginbtn">
+            <button class="btn btn-success" style="width: 315px;height: 44px" type="button" data-loading-text="正在提交..." onclick="login($(this))">登　　录</button>
+        </div>
+        <div class="bottom">
+            <a class="rem" href="">忘记密码</a>
+            <a class="res" href="../manager/register" target="_blank">免费注册</a>
+        </div>
+    </div>
+    <div class="footer-bot">
+        <div class="mainbox" style=" font-size: 14px;">
+            <div class="foot_help">
+                <!--<div class="help_zh"><span>新手上路</span>
+                    <ul>
+                        <li><a target="_blank" >常见问题</a></li>
+                        <li><a target="_blank" >新手买家</a></li>
+                        <li><a target="_blank" >新手卖家</a></li>
+                    </ul>
+                </div>
+
+                <div class="help_zh"><span>规则规范</span>
+                    <ul>
+                        <li><a target="_blank" >会员规范</a></li>
+                        <li><a target="_blank" >交易规则</a> </li>
+                    </ul>
+                </div>
+                <div class="help_zh"><span>关于我们</span>
+                    <ul>
+                        <li><a target="_blank" >关于我们</a></li>
+                        <li><a target="_blank" >法律声明</a></li>
+                        <li><a target="_blank" >联系我们</a></li>
+                    </ul>
+                </div>-->
+                <div class="clearfix" style="margin-top: 15px"></div>
+                <div class="foot_pic">
+
+                    <div class="clearfix" style="margin-top: 15px"></div>
+                    <div style="width:415px;margin:0 auto; padding:0px 0;text-align:center;">
+                    </div>
+                    <p class="gray" style="margin:10px 0 0;" id="mlk">Copyright©2018-2018 马李凯 版权所有</p>
+                    <script language="javascript">
+                        var strY=new Date().getFullYear();
+                        var strHtml="Copyright©2018-"+strY+" 马李凯 版权所有";
+                        document.getElementById("mlk").innerHTML=strHtml;
+                    </script>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+</body>
+</html>

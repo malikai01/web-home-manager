@@ -1,0 +1,112 @@
+/*å…¨å±€æ ·å¼*/
+*{margin:0;padding: 0; color:#333; font-family:"Microsoft YaHei","Hiragino Sans GB"; font-size: 14px;}
+body,span,dl,dd,dt,ul,li,h1,h2,h3,h4,h5,h6,p,b,mark,time{margin:0;padding: 0;}
+body{ overflow-x: hidden;}
+ul{margin:0; padding: 0;}
+ul li{ list-style: none; }
+a{ text-decoration: none;}
+a:hover{text-decoration: none;}
+select,input,a,button{outline:0;}
+button{border-radius: 3px;}
+
+.header{width:100%; height:80px; overflow:hidden; margin:0 auto; padding:0; border-bottom:1px solid #ddd;}
+.mainbox {
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    text-align: left;
+}
+.dl-txt {
+    height: 40px;
+    font-size: 20px;
+    margin: 10px 0 0 20px;
+    padding: 10px 20px 10px;
+    border-left: 1px solid #ddd;
+}
+.box{ max-width: 1000px; margin: 0 auto;padding: 0 10px;}
+.logo {
+    width: 350px;
+    height: 80px;
+    float: left;
+    text-align: left;
+    overflow: hidden;
+}
+.information{ float: right;}
+.information a{padding: 0 5px; color: #333;}
+article{margin-top:35px;}
+article>.box{ max-width: 885px;}
+.heading{text-align: center; height: 35px; border-bottom: 1px solid #bdbdbd;  }
+.heading ul{display: inline-block;}
+.heading ul li{cursor: pointer; float: left; padding: 0 15px; margin-right: 65px; line-height: 35px; font-size: 16px;}
+.heading ul li em{ font-style: normal; margin-right: 5px; color: #fff; font-weight: normal; width: 18px; height: 18px; background: #ccc; border-radius: 18px; line-height: 18px; display: inline-block;}
+li.active{ border-bottom: 2px solid #fb3331; color: #fb3331;}
+li.active em{ background: #fb3331 !important;}
+.Tabconter{margin-top: 40px; text-align: center; display: block;}
+.Tabconter:first-child{display: block;}
+.Tabconter ul{ display: inline-block;width: 399px;}
+.Tabconter li{position: relative; margin-bottom: 26px; width: 100%;  height: 42px; line-height: 42px; border: 1px solid #DDD;}
+/*.Tabconter li.newhight{margin-bottom:40px;}*/
+.Tabconter li label,.Tabconter li select,.Tabconter li input,.Tabconter li .file{ float: left; font-weight: normal;}
+.Tabconter li .file{background-color: #e5e5e5;}
+.Tabconter li label,.Tabconter li span{ width: 25%; color: #666; text-align: center;height: 40px;}
+.Tabconter li select{ width: 74%; height: 40px;border: none; background: #fff;padding:9px\9;line-height: 40px}
+.Tabconter li input{line-height: 40px; width: 74%; border: none; height: 40px; text-indent: 18px;}
+.Tabconter li font{position: absolute; z-index: 2;left: 28.2%; line-height: 40px; color: rgb(204, 204, 204); display: inline;}
+.Tabconter li p{ width:600px;line-height: 18px;text-align: left; color: #ccc; font-size: 12px;padding-left: 10px}
+.Tabconter li p i,.Tabconter li p i span{ color: #ccc; font-size: 14px;position: relative;}
+.Tabconter li i{ position: absolute; height: 18px; height: 18px; border-radius: 18px; color: #72ca0b; right: 10px;margin-left: 10px}
+.Tabconter li.warn{border-color:#e22;}
+.Tabconter li.warn p,.Tabconter li.warn p i,.Tabconter li P span{color:#e22;font-size: 12px}
+.Tabconter li.warn p i{ font-size: 18px; position: relative; top: 2px;}
+.Tabconter li input.test{ width: 45%;}
+.Tabconter li .span_btn{ background-color: #e5e5e5; display: block; float: right;font-size: 14px;cursor:pointer;}
+.Tabconter ul button,.Tabconter ul .btn_a,.upmeans .btn_a,.upmeans .next{cursor: pointer; display: inline-block; width: 100%; height: 40px; background: #fb3331; border: none; color: #fff; margin-top: 10px;}
+.newsbj ul li{margin-right: 50px;}
+.means{}
+.means>thead>tr>th,.means>tbody>tr>td{text-align: center;padding: 15px 0;}
+.means>tbody>tr>td{vertical-align : middle;}
+.means>tbody>tr{height: 110px}
+.means thead,.means>tbody>tr.grey{ background: #f5f5f5;}
+.means>thead>tr>th{border-bottom: none !important; font-size: 16px; font-weight: normal;}
+.means>tbody>tr>td{ line-height: 26px; color: #666;}
+.means>tbody>tr.grey td{color: #fb3331 !important;}
+.means>tbody>tr>td>label{font-weight: normal; cursor: pointer;}
+.means>tbody>tr>td>label>i{ font-size: 12px; color: #2994e7;}
+.means>tbody>tr>td>label{color: #2994e7;}
+.meansImg{position: relative; max-width: 120px; max-height: 80px;min-width: 120px;  display: inline-block; overflow: hidden}
+.meansImg img{height: 100%;cursor: pointer;}
+.meansImg em{ cursor: pointer; position: absolute; right: 0; bottom: 0; padding: 0px 8px; background: #2994e7; }
+.meansImg em i{color: #fff; font-size: 13px;}
+.meansImg span {width: 150px;height: 25px;margin-right: 30px}
+.upmeans{padding: 0 15px;}
+.upmeans>p{ text-align: left;line-height: 0px; margin-bottom: 20px;}
+.upmeans>p span{color: #fb3331;}
+.upmeans>p font{color: #2071af;}
+.upmeans> a,.Tabconter a{ max-width: 400px; line-height: 40px; border-radius: 3px; display: inline-block;}
+
+.accomplish{padding: 100px 20px 90px 20px; text-align: center;}
+.accomplish h4{border-bottom: 1px dashed #9e9e9e;padding-bottom: 30px;}
+.accomplish h4 i{font-size: 40px;margin-right: 10px; color: #5fc416;}
+.accomplish h4 span{ font-size: 20px;color: #fb3331;}
+.accomplish p{ line-height: 30px; padding-top: 20px;}
+label.file{background-color: #f4f4f4;float: right !important; cursor: pointer;}
+
+.look{text-align: center; margin: 10px 0 30px 0;}
+.look h3{font-size: 18px; color: #666;}
+.tavlist{ text-align: center;max-width: 400px; margin: 0 auto;}
+.tavlist ul{ display: inline-block;}
+.tavlist li{ float: left;  margin: 0 50px; }
+.tavlist li.active{ border-bottom: none; }
+.tavlist li.active label{color: #fb3331;}
+.tavlist li label{font-size: 16px; font-weight: normal;cursor: pointer; }
+.tavlist li input{margin-right: 5px;}
+.loofor .Tabconter{margin-top: 15px;}
+.loofor .Tabconter p{font-size: 12px; color: #666;margin-top: 20px; line-height: 18px;text-align: center;}
+.loofor .Tabconter p a{color: #666;font-size: 12px; }
+footer{border-top: 1px solid #eee; line-height: 22px; margin-top: 40px; height: 80px; padding-top: 20px; box-shadow: 0px -2px 6px rgba(0,0,0,0.2); text-align: center; font-size: 12px;}
+footer b{ font-size: 12px;}
+
+
+
+
